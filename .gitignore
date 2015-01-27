@@ -1,0 +1,9 @@
+*~
+.*.swp
+
+*.pro.user*
+
+*.orig
+*.rej
+
+Thumbs.db
