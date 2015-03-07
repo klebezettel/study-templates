@@ -22,7 +22,7 @@ void f()
 
 // ----------------------------------------------------------------------
 // Overload resolution vs template argument deduction
-// ==> First templtae argument deduction happens, then overload resolution.
+// ==> First template argument deduction happens, then overload resolution.
 // During argument deduction no conversation operators are used, types must
 // match perfectly!
 
@@ -39,6 +39,7 @@ MyString<T> truncate(MyString<T> const &s, int)
 void f2()
 {
     MyString<char> s1 = truncate<char>("hello", 5); // OK, no argument deduction, no conflict.
+    Q_UNUSED(s1);
 
     // OPS, argument deduction fails (types must match without conversation),
     // so it does not even comes to overload resolution
